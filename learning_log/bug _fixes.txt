@@ -1,0 +1,6 @@
+command to initialize a virtual environment for python 2.7:
+
+"python -m virtualenv ll_env"
+
+Here "ll_env" is the folder name where I want to store the
+libraries. One can change this name as per wish. 
