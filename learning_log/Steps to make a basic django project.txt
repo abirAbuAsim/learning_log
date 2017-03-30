@@ -1,0 +1,20 @@
+Basic setup of the project:
+1. create a folder with the same name as the project
+2. create virtual environment inside this folder
+3. activate the virtual environment
+4. install Django inside the virtual environment
+5. start a django project with the same folder name as above
+6. view if the project is set up by running the server
+
+Start an App:
+1. use "startapp" command to start a new app inside the project, 
+   using a different name other than the project name is preferred.
+
+2. define models in "models.py"
+3. activate models in "settings.py", add your new App's name inside 
+   the INSTALLED_APPS variable
+4. tell Django to modify database for the new models: "makemigrations" then "migrate"
+5. set up superuser with "createsuperuser"
+6. register your model in the admin site by adding these line inside "admin.py", 
+   - "from app_name.models import model_name"
+   - "admin.site.register(model_name)"
