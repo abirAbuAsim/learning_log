@@ -1,0 +1,23 @@
+Map URL:
+1. in main project folder: change the urls.py
+	- extra import: include
+	- inside urlpatterns list, "url(r'', include('app_name.urls', namespace='app_name'))"
+2. inside app folder make a new urls.py file; in that file,
+	- "from . import views"
+	- "url(r'^$', views.index, name='index')"
+
+Add View:
+1. open the already created view.py file inside app_name folder,
+2. Add the following function in that file,
+	- def index(request):
+		return render(request, 'app_name/index.html')
+
+Add template file:
+1. Create an index.html file following this directory structure 
+	app_name>templates>app_name>index.html
+2. Add your desired html codes inside
+
+Migrate the changes:
+1. "python manage.py makemigrations app_name"
+2. "python mange.py migrate"
+3. check the changes by running the server, "python manage.py runserver"
